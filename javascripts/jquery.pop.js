@@ -25,7 +25,7 @@
       self.each(function() {
         var pop_classes = $(this).attr("class");
         $(this).addClass("pop_menu");
-        $(this).wrap("<div class='"+pop_classes+"'></div>");
+        $(this).wrap("<div class='pop "+pop_classes+"'></div>");
         $(".pop_menu").attr("class", "pop_menu");
         $(this).before(" \
           <div class='pop_toggle'>"+settings.pop_toggle_text+"</div> \
