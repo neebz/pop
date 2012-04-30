@@ -19,6 +19,7 @@
     }
     
     var self = $(this);
+    var pop_class = self.attr("class");
     // inject html wrapper
     function initpops (){
       self.each(function() {
@@ -56,8 +57,9 @@
      closeInactivePop();
     });
     // toggle that pop
-    $(".pop_toggle").click(function(){
-      $(this).parent(settings.pop_class).toggleClass("active");
+
+    self.parent("."+pop_class).find(".pop_toggle").click(function(){
+      $(this).parent("."+pop_class).toggleClass("active");
     });
   }
 
